@@ -1,0 +1,15 @@
+{
+  "name": "sw-color-chips-cypress",
+  "version": "1.0.0",
+  "description": "SW paint swatch tests",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^14.2.0",
+    "typescript": "^5.8.2"
+  }
+}
