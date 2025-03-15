@@ -1,10 +1,12 @@
-import { links } from '../fixtures/links.json';
+import { colorPath } from '../fixtures/links.json';
 
-describe('template spec', () => {
-  links.forEach((link) => {
-    it(`should visit ${link} successfully`, () => {
-      cy.visit(link);
-      cy.location('pathname').should('contain', link);
+const pathname = `/${Cypress.env('LANG')}/colors/browse-colors/${Cypress.env('STORE')}`;
+
+describe('SW-Color-Path', () => {
+  colorPath.forEach((color) => {
+    it(`should visit ${color} successfully`, () => {
+      cy.visit(`${pathname}${color}`);
+      cy.location('pathname').should('contain', color);
     });
   });
 });
